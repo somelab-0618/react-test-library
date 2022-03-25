@@ -25,7 +25,7 @@ afterEach(() => {
 
 afterAll(() => server.close);
 
-describe('Mocking API', () => {
+describe('Mocking APIでのレンダリングテスト', () => {
   it('Fetchが成功した場合はデータが正しく表示され、ボタンが無効化される', async () => {
     render(<MockServer />);
     userEvent.click(screen.getByRole('button'));
