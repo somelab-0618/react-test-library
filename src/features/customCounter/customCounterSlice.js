@@ -77,6 +77,11 @@ export const customCounterSlice = createSlice({
       console.log(action.payload);
       state.username = action.payload;
     });
+    // fetchJSONが失敗した場合
+    builder.addCase(fetchJSON.rejected, (state, action) => {
+      console.log(action.payload);
+      state.username = 'anonymous';
+    });
   },
 });
 
